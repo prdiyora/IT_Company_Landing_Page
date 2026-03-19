@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RadhaVision — IT Company</title>
+  <!-- Link to the main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    HEADER / NAVBAR
+    - Contains company logo/name and navigation links for sections on the page.
+    - We'll use semantic <header> and a flex container for alignment.
+  -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo / Brand -->
+      <a href="#home" class="logo">RadhaVision</a>
+
+      <!--
+        Main navigation
+        - Use a <ul> list for accessibility and predictable styling
+        - `aria-label` helps screen readers; `id` connects to the toggle button
+      -->
+      <nav id="main-nav" class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn-outline">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile nav toggle (hamburger) -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <!--
+    HERO SECTION
+    - First impression: short intro, tagline and primary call-to-action (CTA)
+    - Uses a gradient background and strictly centered content.
+  -->
+  <section id="home" class="hero fade-in">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>We build modern digital products</h1>
+        <p class="lead">RadhaVision helps companies scale with thoughtful design, reliable engineering, and delightful experiences.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    SERVICES SECTION
+    - Contains 3 service cards.
+    - Desktop: 3 columns; Tablet: 2 columns; Mobile: 1 column.
+    - We'll use CSS Grid for the service cards so we can change columns with media queries.
+  -->
+  <section id="services" class="services section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">What we offer to help your business grow</p>
+      <div class="services-grid">
+        <article class="card service-card">
+          <div class="card-icon">💡</div>
+          <h3>Product Design</h3>
+          <p>Design systems, UX research, and visual design that delight users and scale with your product.</p>
+          <a class="card-link" href="#contact">Learn more →</a>
+        </article>
+
+        <article class="card service-card">
+          <div class="card-icon">⚙️</div>
+          <h3>Engineering</h3>
+          <p>Clean, testable code and scalable architectures using modern JavaScript, TypeScript, and cloud platforms.</p>
+          <a class="card-link" href="#contact">Learn more →</a>
+        </article>
+
+        <article class="card service-card">
+          <div class="card-icon">☁️</div>
+          <h3>Cloud & DevOps</h3>
+          <p>Reliable deployments, observability, and cost-efficient cloud architecture designs tailored to your needs.</p>
+          <a class="card-link" href="#contact">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    ABOUT SECTION
+    - Describe mission and approach. Keep this section simple and readable.
+  -->
+  <section id="about" class="about section fade-in">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>About RadhaVision</h2>
+        <p>We are a team of designers, engineers, and cloud experts focused on delivering high-quality digital products. Our approach combines strategy, design, and engineering to build solutions that stand the test of time.</p>
+        <ul>
+          <li>Human-centered design</li>
+          <li>Scalable architectures</li>
+          <li>Transparent communication</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <!-- A placeholder for an actual team or office image -->
+        <div class="image-placeholder">
+          <span>📸 Our Team Placeholder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    CONTACT SECTION
+    - Simple contact form; we won't post data anywhere — JS prevents submission for demo purposes.
+  -->
+  <section id="contact" class="contact section fade-in">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Tell us about your project and we'll get back with a tailored proposal.</p>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" required placeholder="Jane Doe">
+        </label>
+        <label>
+          <span>Your email</span>
+          <input type="email" name="email" required placeholder="jane@example.com">
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="4" required placeholder="Tell us about your needs..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <!--
+    FOOTER
+    - Small footer with copyright and quick links.
+  -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RadhaVision — All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Link to small JS that handles nav toggle and form demo behavior -->
+  <script src="script.js"></script>
+</body>
+</html>
